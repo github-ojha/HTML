@@ -1,0 +1,6 @@
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\bin\SheilasCoffeStore5.Web.dll.config
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\bin\SheilasCoffeStore5.Web.dll
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\bin\SheilasCoffeStore5.Web.pdb
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\obj\Debug\SheilasCoffeStore5.Web.csprojResolveAssemblyReference.cache
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\obj\Debug\SheilasCoffeStore5.Web.dll
+C:\Exercises\HTML\SheilasCoffeStore5.Web\SheilasCoffeStore5.Web\obj\Debug\SheilasCoffeStore5.Web.pdb

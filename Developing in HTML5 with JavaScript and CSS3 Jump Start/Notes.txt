@@ -1,0 +1,27 @@
+http://www.microsoftvirtualacademy.com/training-courses/learn-html5-with-javascript-css3-jumpstart-training
+May 21, 2015
+
+
+Exams 70-480
+70-481
+code example
+
+http://codeshow.codeplex.com has moved to github
+https://github.com/codefoster/codeshow
+
+
+Jeremy Foster @codefoster 
+
+Micheal Palermo @palermo4
+
+(01) HTML5 Semantic Structures | P1
+-----------------------------------
+HTML5 Semantic Structure
+
+Form
+
+	<input  type="text" required/>
+	<input type="email" required placeholder="you@domain.com"/>
+	
+	
+audio/Vide
