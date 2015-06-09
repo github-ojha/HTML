@@ -66,8 +66,14 @@
     <Content Include="images\coffee\Starbucks-Iced-Coffee-Line.jpg" />
     <Content Include="images\coffee\vermont_coffee_company_products.jpg" />
     <Content Include="images\Accessories\holders.jpg" />
+    <Content Include="images\cotm_120px-CoffeeCatucai.jpg" />
     <Content Include="images\logo.jpg" />
+    <Content Include="images\cotm_DublinSterlingSilverHotWaterJug.jpg" />
+    <Content Include="images\welcome_120px-CoffeeDetail_longer.jpg" />
+    <Content Include="images\welcome_120px-Zubereitung_mokka_longer.jpg" />
     <Content Include="index.html" />
+    <Content Include="scripts\myScript.js" />
+    <Content Include="Styles\Layout.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
