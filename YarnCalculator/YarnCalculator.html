@@ -1,19 +1,43 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Yarn Calculator</title>
 </head>
 <body>
 
     <h1>Yarn Calculator</h1>
+    <fieldset>
+        <legend>Knitting or Crocheting</legend>
+        <input id="chkBoxK" type="checkbox" name="ActivityTypes" value="knitting" checked="checked" onchange="YarnCalculator.HideShowKnittingCrochet(this,'knitting' )" />
+        <label for="chkBoxK">Knitting</label>
 
+        <input id="chkBoxC" type="checkbox" name="ActivityTypes" value="crochet" checked="checked" onchange="YarnCalculator.HideShowKnittingCrochet(this, 'crochet')" />
+        <label for="chkBoxC">Crochet</label>
+
+
+    </fieldset>
     <div>
         <label for="thicknesses">Weight</label>
-        <select id="thicknesses">
-            <option>Please select a weight</option>
+        <select id="thicknesses" onchange="YarnCalculator.DisplayWeightDetails(); ">
+            <option value="">&lt;Please select a thickness/weight&gt;</option>
         </select>
-
     </div>
+    <br />
+    <fieldset>
+        <legend>Yarn Weight</legend>
+        <img id="yimg" />
+        <div id="weigthdetails">
+        </div>
+        <div id="knitting">
+            <h2>Knitting</h2>
+            <div id="weigthdetails_k"></div>
+        </div>
+        <div id="crochet">
+            <h2>Crocheting</h2>
+            <div id="weigthdetails_c"></div>
+        </div>
+    </fieldset>
+
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/YarnCalculator.js"></script>
 </body>
