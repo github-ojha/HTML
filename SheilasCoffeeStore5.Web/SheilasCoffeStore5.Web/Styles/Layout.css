@@ -5,6 +5,11 @@
     font-family: Verdana;
 }
 
+@font-face {
+    font-family: headerfont;
+    src: url(../fonts/Lobster_1.3.otf);
+}
+
 header {
     font-weight: bold;
 }
@@ -32,11 +37,13 @@ header {
 }
 
 #headername {
+    font-family: headerfont;
     font-size: 40px;
     color: #603813;
     padding: 15px;
     margin: 8px 0px;
     font-weight: bold;
+    text-shadow: 5px 5px 5px #5f2c17;
 }
 
 #welcomimage {
@@ -55,6 +62,11 @@ header {
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
+    column-count: 2;
+    -webkit-column-count: 2;
+    /*or alternate way to get columns and spacing*/
+    /*column-width:200px;
+    column-gap:40px;*/
 }
 
     #welcometext > header {
@@ -95,34 +107,85 @@ header {
 }
 
 
-.textlabel  { 
-  margin: 0; 
-  padding: 0; 
-  display: block; 
-  font-size: 100%; 
-  padding-top: .1em; 
-  padding-right: .25em; 
-  width: 6em; 
-  text-align: right; 
-  float: left; 
-} 
-.textinput  input, 
-.textinput  textarea { 
-  margin: 0; 
-  padding: 0; 
-  display: block; 
-  font-size: 100%; 
-} 
+.textlabel {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 100%;
+    padding-top: .1em;
+    padding-right: .25em;
+    width: 6em;
+    text-align: right;
+    float: left;
+}
 
-input:active, 
-input:focus, 
-input:hover, 
-textarea:active, 
-textarea:focus, 
-textarea:hover { 
-  background-color: lightyellow; 
-  border-color: yellow; 
-} 
+.textinput input,
+.textinput textarea {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 100%;
+}
+
+input:active,
+input:focus,
+input:hover,
+textarea:active,
+textarea:focus,
+textarea:hover {
+    background-color: lightyellow;
+    border-color: yellow;
+}
+
+.backgroundgradients {
+    /*background:  #603813*/
+    background: -webkit-linear-gradient(left,#603813, #321c05); /* For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(right, #603813, #321c05); /* For Opera 11.1 to 12.0*/
+    background: -moz-linear-gradient(right, #603813, #321c05); /* For Firefox 3.6 to 15*/
+    background: linear-gradient(to right, #603813, #321c05);
+    color: white;
+}
+
+nav ul li {
+    /*display: block;*/
+}
+
+.navlink {
+    height: 35px;
+    margin-right: 10px;
+    font-size: 18px;
+    float: left;
+    padding-top: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+    .navlink.active {
+    }
+
+.addtocartbutton {
+    cursor: pointer;
+    padding: 4px 25px;
+    background: #603813;
+    border: 1px solid #381f09;
+    -moz-border-radius: 8px;
+    -webkit-bordero-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.75);
+    box-shadow: 0 0 4px rgba(0,0,0,.75);
+    color: #F3F3F3;
+    font-size: 0.8em;
+    width: 80px;
+}
+
+    .addtocartbutton:hover, .addtocartbutton:focus {
+        background-color: #512c0a;
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0,.75);
+        -moz-box-shadow: 0 0 1px rgba(0,0,0,.75);
+        box-shadow: 0 0 1px rgba(0,0,0,.75);
+    }
+
 .productarticlemoreinfo {
     font-size: 12px;
     color: #603813;
@@ -141,7 +204,7 @@ footer {
     font-size: 10px;
 }
 
-*/
+
 /* All coffees page styles*/
 .blockheader {
     font-size: 30px;

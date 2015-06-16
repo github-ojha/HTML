@@ -1,0 +1,102 @@
+﻿
+/*style sampler*/
+.linearGradientTopBottom {
+    height: 250px;
+    background: linear-gradient(orange, green);
+}
+
+.linearGradientHorizontal {
+    height: 250px;
+    background: linear-gradient(to right,orange, green);
+}
+
+.linearGradientDiagonal {
+    height: 250px;
+    background: linear-gradient(to bottom right,orange, green);
+}
+
+.radialGradient {
+    height: 250px;
+    width: 300px;
+    background: radial-gradient(yellow, orange, red);
+}
+
+.radialGradientRatios {
+    height: 250px;
+    width: 300px;
+    background: radial-gradient(yellow 10%, orange 20%, red 60%);
+}
+
+#transforms div {
+    height: 250px;
+    height: 350px;
+    background-color: lightblue;
+    opacity: 0.2;
+}
+
+.rotate45 {
+    transform: rotate(45deg);
+}
+
+.skew3220 {
+    transform: skew(30deg, 20deg);
+}
+
+/* animation styles*/
+#animations div {
+    height: 200px;
+    width: 200px;
+   
+}
+
+@keyframes homeAnimation {
+    0% {
+        background: green;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background: brown;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background: yellow;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+.animationsingle {
+    animation: homeAnimation 10s;
+}
+
+.animationrepeating {
+    animation: homeAnimation 4s;
+    animation-iteration-count: infinite;
+}
+/*text styling*/
+.textShadow {
+    text-shadow:5px 5px 5px #dc9c27;
+}
+
+@font-face {
+    font-family:myHeaderFont;
+    src:url(sansation_light.woff);
+}
+.textSpecialFont {
+    font-family:myHeaderFont;
+}

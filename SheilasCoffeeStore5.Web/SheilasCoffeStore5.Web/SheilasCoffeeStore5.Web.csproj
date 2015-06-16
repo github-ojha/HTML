@@ -74,7 +74,9 @@
     <Content Include="images\welcome_120px-Zubereitung_mokka_longer.jpg" />
     <Content Include="index.html" />
     <Content Include="scripts\myScript.js" />
+    <Content Include="styleSampler.html" />
     <Content Include="Styles\Layout.css" />
+    <Content Include="Styles\StyleSampler.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,7 +90,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="fonts\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
