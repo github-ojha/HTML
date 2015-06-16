@@ -20,7 +20,7 @@ header {
     }
 
 #mainHeader {
-    height: 80px;
+    height: 200px;
 }
 
 
@@ -95,9 +95,34 @@ header {
 }
 
 
+.textlabel  { 
+  margin: 0; 
+  padding: 0; 
+  display: block; 
+  font-size: 100%; 
+  padding-top: .1em; 
+  padding-right: .25em; 
+  width: 6em; 
+  text-align: right; 
+  float: left; 
+} 
+.textinput  input, 
+.textinput  textarea { 
+  margin: 0; 
+  padding: 0; 
+  display: block; 
+  font-size: 100%; 
+} 
 
-
-
+input:active, 
+input:focus, 
+input:hover, 
+textarea:active, 
+textarea:focus, 
+textarea:hover { 
+  background-color: lightyellow; 
+  border-color: yellow; 
+} 
 .productarticlemoreinfo {
     font-size: 12px;
     color: #603813;

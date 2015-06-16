@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SheilasCoffeStore5.Web</RootNamespace>
-    <AssemblyName>SheilasCoffeStore5.Web</AssemblyName>
+    <RootNamespace>SheilasCoffeeStore5.Web</RootNamespace>
+    <AssemblyName>SheilasCoffeeStore5.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="allcoffees.html" />
+    <Content Include="checkout.html" />
     <Content Include="coffeedetails.html" />
     <Content Include="images\CoffeeCups\64px-A_small_cup_of_coffee By Julius Schorzman.JPG" />
     <Content Include="images\coffee\ayurvedicRoast.jpg" />
