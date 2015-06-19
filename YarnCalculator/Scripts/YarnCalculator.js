@@ -329,7 +329,7 @@ YarnCalculator.NeedleHookConversionBase = [
 { MetricInMM: 25.0, Knitting: { US: 50 } }
 ];
 //--- endknitting needle size conversion
-YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, displayKnitting, displayCrochet) {
+YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, displayKnitting, displayCrochet, addUnitFilterClasses) {
 
     var tablee = document.getElementById(elementId);
 
@@ -352,6 +352,12 @@ YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, display
             cell1.innerHTML = "Metric (mm)";
             cell2.innerHTML = "US";
             cell3.innerHTML = "UK";
+
+            if (addUnitFilterClasses) {
+                cell1.className = "MM";
+                cell2.className = "US";
+                cell3.className = "UK";
+            };
         }
         if (displayCrochet) {
             cell4 = row.insertCell(-1);
@@ -360,8 +366,13 @@ YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, display
             cell4.innerHTML = "Metric (mm)";
             cell5.innerHTML = "US";
             cell6.innerHTML = "UK";
-        }
 
+            if (addUnitFilterClasses) {
+                cell4.className = "MM";
+                cell5.className = "US";
+                cell6.className = "UK";
+            };
+        }
 
         YarnCalculator.NeedleHookConversionBase.forEach(function (value, index) {
 
@@ -374,6 +385,12 @@ YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, display
                 cell1.innerHTML = value.MetricInMM;
                 cell2.innerHTML = value.Knitting.US ? value.Knitting.US : "";
                 cell3.innerHTML = value.Knitting.UK ? value.Knitting.UK : "";
+
+                if (addUnitFilterClasses) {
+                    cell1.className = "MM";
+                    cell2.className = "US";
+                    cell3.className = "UK";
+                };
             }
 
             if (displayCrochet && value.Crochet) {
@@ -383,6 +400,12 @@ YarnCalculator.NeedleHookConversionChartTableRows = function (elementId, display
                 cell4.innerHTML = value.MetricInMM;
                 cell5.innerHTML = value.Crochet.US ? value.Crochet.US : "";
                 cell6.innerHTML = value.Crochet.UK ? value.Crochet.UK : "";
+
+                if (addUnitFilterClasses) {
+                    cell4.className = "MM";
+                    cell5.className = "US";
+                    cell6.className = "UK";
+                }
             }
         });
     } else {
@@ -400,15 +423,28 @@ YarnCalculator.HideShowKnittingCrochet = function (checkbox, showHideElementId) 
         // toHideOrShow.style.visibility = "hidden";
     }
 }
+YarnCalculator.HideShowClass = function (checkbox, showHideClass) {
+    var toHideOrShowElements = document.getElementsByClassName(showHideClass);
+    var style;
+    if (checkbox.checked) {
+        style = "visible";
+    } else {
+        style = "hidden";
+    };
+
+    for (i = 0; i < toHideOrShowElements.length; i++) {
+        toHideOrShowElements[i].style.visibility = style;
+    };
+}
 $(document).ready(function () {
     if (document.getElementById("KnittingNeedleSizesChart")) {
-        YarnCalculator.NeedleHookConversionChartTableRows("KnittingNeedleSizesChart", true, false);
+        YarnCalculator.NeedleHookConversionChartTableRows("KnittingNeedleSizesChart", true, false, true);
     }
     if (document.getElementById("CrochetHookSizesChart")) {
-        YarnCalculator.NeedleHookConversionChartTableRows("CrochetHookSizesChart", false, true);
+        YarnCalculator.NeedleHookConversionChartTableRows("CrochetHookSizesChart", false, true, true);
     }
-    if (document.getElementById("NeedletHookSizesChart")) {
-        YarnCalculator.NeedleHookConversionChartTableRows("NeedletHookSizesChart", true, true);
+    if (document.getElementById("NeedleHookSizesChart")) {
+        YarnCalculator.NeedleHookConversionChartTableRows("NeedleHookSizesChart", true, true);
     }
 
     YarnCalculator.YarnWeights.forEach(function (value, index) {

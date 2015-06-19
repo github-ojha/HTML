@@ -5,24 +5,55 @@
 </head>
 <body>
 
-    <h1>Knitting Needle Size Conversion Chart</h1>
-    <fieldset>
-        <legend>Knitting Needle Sizes</legend>
-        <table id="KnittingNeedleSizesChart"> </table>
-    </fieldset>
-    <h1>Crochet Hook Size Conversion Chart</h1>
-    <fieldset>
-        <legend>Crochet Hook Sizes</legend>
-        <table id="CrochetHookSizesChart"> </table>
-    </fieldset>
+    <h1>Needle Size Conversion Charts</h1>
+    <div>
+        <fieldset>
+            <legend>Chart Display Selector</legend>
+            <fieldset>
+                <legend>Craft</legend>
+                <input id="chkBoxK" type="checkbox" name="ActivityTypes" value="knitting" checked="checked" onchange="YarnCalculator.HideShowKnittingCrochet(this,'knitting' )" />
+                <label for="chkBoxK">Knitting</label>
 
-    <h1>Knitting Needle and Crochet Hook Size Chart</h1>
-    <fieldset>
-        <legend>Knitting Needle and Crochet Hook Sizes</legend>
-        <table id="NeedletHookSizesChart"> </table>
-    </fieldset>
-    <script src="Scripts/jquery-2.1.4.min.js"></script>
-    <script src="Scripts/YarnCalculator.js"></script>
+                <input id="chkBoxC" type="checkbox" name="ActivityTypes" value="crochet" checked="checked" onchange="YarnCalculator.HideShowKnittingCrochet(this, 'crochet')" />
+                <label for="chkBoxC">Crochet</label>
+            </fieldset>
+            <fieldset>
+                <legend>Units to Display</legend>
+                <input id="chkBoxMM" type="checkbox" name="MeasurementTypes" value="MM" checked="checked" onchange="YarnCalculator.HideShowClass(this,'MM' )" />
+                <label for="chkBoxMM">Millimeters</label>
+
+                <input id="chkBoxUS" type="checkbox" name="MeasurementTypes" value="US" checked="checked" onchange="YarnCalculator.HideShowClass(this, 'US')" />
+                <label for="chkBoxUS">US</label>
+
+                <input id="chkBoxUK" type="checkbox" name="MeasurementTypes" value="UK" checked="checked" onchange="YarnCalculator.HideShowClass(this, 'UK')" />
+                <label for="chkBoxUK">UK</label>
+            </fieldset>
+        </fieldset>
+    </div>
+
+    <div id="knitting">
+        <h1>Knitting Needle Size Conversion Chart</h1>
+        <fieldset>
+            <legend>Knitting Needle Sizes</legend>
+            <table id="KnittingNeedleSizesChart"> </table>
+        </fieldset>
+    </div>
+
+    <div id="crochet">
+        <h1>Crochet Hook Size Conversion Chart</h1>
+        <fieldset>
+            <legend>Crochet Hook Sizes</legend>
+            <table id="CrochetHookSizesChart"> </table>
+        </fieldset>
+    </div>
+
+        <h1>Knitting Needle and Crochet Hook Size Chart Master</h1>
+        <fieldset>
+            <legend>Knitting Needle and Crochet Hook Sizes</legend>
+            <table id="NeedleHookSizesChart"> </table>
+        </fieldset>
+        <script src="Scripts/jquery-2.1.4.min.js"></script>
+        <script src="Scripts/YarnCalculator.js"></script>
 </body>
 
 </html>
