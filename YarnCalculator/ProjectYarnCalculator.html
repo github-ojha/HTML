@@ -10,30 +10,34 @@
         <p>Take the information for a pattern.</p>
         <ol></ol>
     </div>
-    <div>
+    <div  >
         <fieldset>
             <legend>Project Estimation</legend>
-            <div id="row_0" class="projectRow"> 
-                <div>
-                    <input id="yardage_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
-                    <label for="yardage_0">Yards/Meters for a Ball</label>
-                </div>
-                <div>
-                    <input id="quantity_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
-                    <label for="quantity_0">Number of Balls</label>
-                </div>
-                <div>
-                    <input id="price_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
-                    <label for="price_0">Price per Ball</label>
-                </div>
-                <div id="rowCalc_0">
-                    <span><span id="rowYardage_0">_</span><span>-Yards/Meters </span> </span>
-                    <span><span id="rowPrice_0">_</span><span>-Price </span> </span>
+            <div ="rows">
+                <div id="row_0" class="projectRow">
+                    <div>
+                        <input id="yardage_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
+                        <label for="yardage_0">Yards/Meters for a Ball</label>
+                    </div>
+                    <div>
+                        <input id="quantity_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
+                        <label for="quantity_0">Number of Balls</label>
+                    </div>
+                    <div>
+                        <input id="price_0" type="number" onchange="YarnCalculator.ProjectCalculator.OnChangeUpdateTotals(this);" />
+                        <label for="price_0">Price per Ball</label>
+                    </div>
+                    <div id="rowCalc_0">
+                        <span><span id="rowYardage_0">_</span><span>-Yards/Meters </span> </span>
+                        <span><span id="rowPrice_0">_</span><span>-Price </span> </span>
+                    </div>
                 </div>
             </div>
             <br />
             <hr />
-
+            <div id="rowActions">
+                <input type="button" value="Add another row" onclick="YarnCalculator.ProjectCalculator.AddNewRow();" />
+            </div>
             <div>
                 <span><span id="totalLength_0">_</span><span>-Total Yards/Meters </span> </span>
                 <span><span id="totalPrice_0">_</span><span>-Total Price </span> </span>

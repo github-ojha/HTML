@@ -450,7 +450,7 @@ YarnCalculator.ProjectCalculator.OnChangeUpdateTotals = function (element) {
     var rowTotalPriceElement = document.getElementById("rowPrice_" + rowIndex);
 
 
-        if (!isNaN(rowYardageElement.value) && !isNaN(rowQuantityElement.value)) {
+    if (!isNaN(rowYardageElement.value) && !isNaN(rowQuantityElement.value)) {
         rowTotalYardageElement.innerText = rowYardageElement.value * rowQuantityElement.value;
     };
 
@@ -459,8 +459,24 @@ YarnCalculator.ProjectCalculator.OnChangeUpdateTotals = function (element) {
     };
 };
 YarnCalculator.ProjectCalculator.AddNewRow = function () {
-     var rowTemplateElement = document.getElementById("row_0");
-   
+    //row 0 is the 'template'
+    var rowTemplateElement = document.getElementById("row_0");
+
+    //get the last row 
+    var rows = document.getElementsByClassName("projectRow");
+    var lastRowElement = rows[rows.length - 1];
+    var lastRowNumber = parseInt((lastRowElement.id).split('_')[1]);
+    var nextRowNumber =  lastRowNumber + 1;
+
+    //
+
+    var newElement = document.createElement(rowTemplateElement.tagName);
+    newElement.id = 'row_' + nextRowNumber;
+    newElement.style = rowTemplateElement.style;
+    newElement.innerHTML= rowTemplateElement.innerHTML.replace(/_0/g, "_" + nextRowNumber);
+
+     lastRowElement.parentNode.insertBefore(newElement, parent.nextElementSibling);
+
 };
 //-- end
 $(document).ready(function () {
