@@ -435,7 +435,34 @@ YarnCalculator.HideShowClass = function (checkbox, showHideClass) {
     for (i = 0; i < toHideOrShowElements.length; i++) {
         toHideOrShowElements[i].style.visibility = style;
     };
-}
+};
+//-- project calculations
+YarnCalculator.ProjectCalculator = {};
+YarnCalculator.ProjectCalculator.OnChangeUpdateTotals = function (element) {
+    var id = element.id;
+    var rowIndex = id.split('_')[1];
+
+    var rowYardageElement = document.getElementById("yardage_" + rowIndex);
+    var rowQuantityElement = document.getElementById("quantity_" + rowIndex);
+    var rowPriceElement = document.getElementById("price_" + rowIndex);
+
+    var rowTotalYardageElement = document.getElementById("rowYardage_" + rowIndex);
+    var rowTotalPriceElement = document.getElementById("rowPrice_" + rowIndex);
+
+
+        if (!isNaN(rowYardageElement.value) && !isNaN(rowQuantityElement.value)) {
+        rowTotalYardageElement.innerText = rowYardageElement.value * rowQuantityElement.value;
+    };
+
+    if (!isNaN(rowPriceElement.value) && !isNaN(rowQuantityElement.value)) {
+        rowTotalPriceElement.innerText = rowPriceElement.value * rowQuantityElement.value;
+    };
+};
+YarnCalculator.ProjectCalculator.AddNewRow = function () {
+     var rowTemplateElement = document.getElementById("row_0");
+   
+};
+//-- end
 $(document).ready(function () {
     if (document.getElementById("KnittingNeedleSizesChart")) {
         YarnCalculator.NeedleHookConversionChartTableRows("KnittingNeedleSizesChart", true, false, true);
