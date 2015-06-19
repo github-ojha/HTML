@@ -25,7 +25,7 @@ header {
     }
 
 #mainHeader {
-    height: 200px;
+    height: 250px;
 }
 
 
@@ -144,15 +144,17 @@ textarea:hover {
     background: -moz-linear-gradient(right, #603813, #321c05); /* For Firefox 3.6 to 15*/
     background: linear-gradient(to right, #603813, #321c05);
     color: white;
+    height: 40px;
 }
 
-nav ul li {
-    /*display: block;*/
-}
+    .backgroundgradients > ul > li {
+        display: inline;
+        padding-left:10px;
+    }
 
 .navlink {
     height: 35px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 18px;
     float: left;
     padding-top: 12px;
