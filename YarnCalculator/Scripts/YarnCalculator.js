@@ -449,7 +449,7 @@ YarnCalculator.ProjectCalculator.OnChangeUpdateTotals = function (element) {
     var rowTotalYardageElement = document.getElementById("rowYardage_" + rowIndex);
     var rowTotalPriceElement = document.getElementById("rowPrice_" + rowIndex);
 
-
+    //row totals
     if (!isNaN(rowYardageElement.value) && !isNaN(rowQuantityElement.value)) {
         rowTotalYardageElement.innerText = rowYardageElement.value * rowQuantityElement.value;
     };
@@ -457,6 +457,23 @@ YarnCalculator.ProjectCalculator.OnChangeUpdateTotals = function (element) {
     if (!isNaN(rowPriceElement.value) && !isNaN(rowQuantityElement.value)) {
         rowTotalPriceElement.innerText = rowPriceElement.value * rowQuantityElement.value;
     };
+
+    //all row totals
+    var rowYardages = document.getElementsByClassName("rowYardage");
+    var rowPrices = document.getElementsByClassName("rowPrice");
+
+    var totalYardageSum = 0;
+    for (i = 0; i < rowYardages.length; i++) {
+        var rowvalue = rowYardages[i].innerText;
+        if (!isNaN(rowvalue)) {
+            totalYardageSum += parseInt(rowvalue);
+        }
+    };
+
+    var TotalYardageElement = document.getElementById("totalYardage");
+    TotalYardageElement.innerText = totalYardageSum;
+
+    var TotalPriceElement = document.getElementById("totalPrice");
 };
 YarnCalculator.ProjectCalculator.AddNewRow = function () {
     //row 0 is the 'template'
@@ -466,16 +483,16 @@ YarnCalculator.ProjectCalculator.AddNewRow = function () {
     var rows = document.getElementsByClassName("projectRow");
     var lastRowElement = rows[rows.length - 1];
     var lastRowNumber = parseInt((lastRowElement.id).split('_')[1]);
-    var nextRowNumber =  lastRowNumber + 1;
+    var nextRowNumber = lastRowNumber + 1;
 
     //
 
     var newElement = document.createElement(rowTemplateElement.tagName);
     newElement.id = 'row_' + nextRowNumber;
     newElement.style = rowTemplateElement.style;
-    newElement.innerHTML= rowTemplateElement.innerHTML.replace(/_0/g, "_" + nextRowNumber);
-
-     lastRowElement.parentNode.insertBefore(newElement, parent.nextElementSibling);
+    newElement.innerHTML = rowTemplateElement.innerHTML.replace(/_0/g, "_" + nextRowNumber);
+    newElement.click();//to clear out row_0 template sums
+    lastRowElement.parentNode.insertBefore(newElement, parent.nextElementSibling);
 
 };
 //-- end

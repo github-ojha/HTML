@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Bootstrap Style Testing</h1>
+
+    <div>
+        <ul>
+            <a href="#test_1">plain </a>
+            <a href="#test_2">container </a>
+            <a href="#test_3">container with form group for each control label </a>
+            <a href="#test_4">container with row and from group  </a>
+            <a href="#test_5">plain </a>
+        </ul>
+    </div>
+    <div>
+        <a name="test_1"><h2> plain </h2></a>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" />
+
+        <label for="middlename">Middle </label>
+        <input type="text" id="middlename" />
+
+        <label for="lastname">Surname</label>
+        <input type="text" id="lastname" />
+
+        <label for="extra">miscellaneous</label>
+        <input type="text" id="extra" />
+        <div class="form-group">  <input type="submit" /></div>
+
+    </div>
+
+    <div class="container">
+        <a name="test_2"><h2> container </h2></a>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" />
+
+        <label for="middlename">Middle </label>
+        <input type="text" id="middlename" />
+
+        <label for="lastname">Surname</label>
+        <input type="text" id="lastname" />
+
+        <label for="extra">miscellaneous</label>
+        <input type="text" id="extra" />
+        <div class="form-group">  <input type="submit" /></div>
+
+    </div>
+    <div class="container">
+        <a name="test_3"><h2> container with form group for each control label </h2></a>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" />
+        </div>
+        <div class="form-group">
+            <label for="middlename">Middle </label>
+            <input type="text" id="middlename" />
+        </div>
+        <div class="form-group">
+            <label for="lastname">Surname</label>
+            <input type="text" id="lastname" />
+        </div>
+        <div class="form-group">
+            <label for="extra">miscellaneous</label>
+            <input type="text" id="extra" />
+        </div>
+        <div class="form-group">
+            <input type="submit" />
+        </div>
+
+    </div>
+
+    <div class="container">
+        <a name="test_4"><h2> container with row and from group </h2></a>
+        <div class="row">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" />
+            </div>
+            <div class="form-group">
+                <label for="middlename">Middle </label>
+                <input type="text" id="middlename" />
+            </div>
+            <div class="form-group">
+                <label for="lastname">Surname</label>
+                <input type="text" id="lastname" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="extra">miscellaneous</label>
+                <input type="text" id="extra" />
+            </div>
+            <div class="form-group">  <input type="submit" /></div>
+        </div>
+    </div>
+    <div class="container">
+        <a name="test_5"><h2> container with row and from group with col class - works the way I want it </h2></a>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" />
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="middlename">Middle </label>
+                <input type="text" id="middlename" />
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="lastname">Surname</label>
+                <input type="text" id="lastname" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="extra">miscellaneous</label>
+                <input type="text" id="extra" />
+            </div>
+            <div class="form-group col-md-6">  <input type="submit" /></div>
+        </div>
+    </div><div class=" container">
+        <a name="test_6"><h2> icontainer with  </h2></a>
+
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Part 2: Fill in indentifying information concerning the employee.</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group col-lg-4">
+                                <label for="firstname">First Name</label>
+                                <input type="text" id="firstname" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="middlename">Middle </label>
+                                <input type="text" id="middlename" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="lastname">Surname</label>
+                                <input type="text" id="lastname" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ibox-title">
+                                <h5>Part 3: Fill in indentifying information concerning the employee.</h5>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="extra">miscellaneous</label>
+                                <input type="text" id="extra" />
+                            </div>
+                            <div class="form-group col-md-6">  <input type="submit" /></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- template-->
+
+    <!-- row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Part 2: Fill in indentifying information concerning the employee.</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="form-horizontal">
+
+                        <!-- insert fields here-->
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- template-->
+
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type='text/javascript' src="http://netdna.bootstrapcdn.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>
