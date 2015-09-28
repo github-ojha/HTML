@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<script>
+	window.onload =function(){
+	 	calculator.doAdd(2,3);
+		calculator.substract(2,3);
+	}
+
+
+
+</script>
+</head>
+<body>
+<h1>Revealing Module Pattern</h1>
+<div id="Output"></div>
+
+<script>
+var calculator = function (eq){
+	//private variable
+	//private functions
+	var eqCtl = document.getElementById(eq),
+		add = function(x,y){ 
+			eqCtl.innerHTML = x+y;
+			},
+		substract = function(x,y){ 
+			alert(x-y);
+			}
+	return { 
+		doAdd:add,
+		substract:substract
+		} 
+	}('Output'); //iffy
+</script>
+</body>
+</html>

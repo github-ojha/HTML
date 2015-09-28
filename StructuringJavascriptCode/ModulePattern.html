@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<script>
+	window.onload =function(){
+		var calc = new Calculator('Output');
+		calc.add(2,3);
+		alert(calc.eqCtl.innerHTML);
+	}
+
+var Calculator = function (eq){
+	//private variable
+	//private functions
+	var eqCtl = document.getElementById(eq);
+	
+	return {
+		//expose public 
+		add: function(x,y){
+			var val = x+y;
+			eqCtl.innerHTML = val;
+			}
+	};
+}
+</script>
+</head>
+<body>
+<h1>Module Pattern</h1>
+<div id="Output"></div>
+</body>
+</html>

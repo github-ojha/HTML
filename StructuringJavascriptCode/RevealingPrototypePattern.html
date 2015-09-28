@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<script>
+	window.onload =function(){
+	var calculator = new Calculator('Output');
+	 	calculator.doAdd(2,3);
+		calculator.substract(2,3);
+	}
+
+	var Calculator = function (eq){
+		// variables defined here
+		//state goes here
+		this.eqCtl = document.getElementById(eq);
+	};
+	
+	// all this will be shared
+	Calculator.prototype = function (){
+		// variables defined here
+		var add = function(x,y){ 
+				this.eqCtl.innerHTML = x + y;
+				},
+			substract = function(x,y){ 
+				alert( x - y);
+				}
+		return { 
+			doAdd: add,
+			substract: substract
+			} 
+	}(); //iffy 
+</script>
+</head>
+<body>
+<h1>Revealing Protoype Pattern</h1>
+<div id="Output"></div>
+ 
+
+	
+</body>
+</html>

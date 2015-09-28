@@ -1,0 +1,5 @@
+
+Structuring JavaScript Code
+
+This course walks through several key patterns that can be used to encapsulate and modularize JavaScript code. Throughout the course you’ll learn how closures and other techniques can be used to better organize your JavaScript code and make it easier to re-use and maintain in HTML5 applications.
+by Dan Wahlin 

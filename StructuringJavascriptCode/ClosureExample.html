@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<title>Using Javascript</title>
+<script type="text/javascript">
+
+	window.onload = function (){
+		var output = document.getElementById('Output');
+		//--------------
+		//output.innerHTML = myNonClosure();
+		
+		//window.setTimeout(function(){
+		//	output.innerHTML += '<br/>'+ myNonClosure();
+		//},500); 
+		
+		//--------------
+		//var closure = myClosure();
+		//var output = document.getElementById('Output');
+		//output.innerHTML = closure();
+		
+		//window.setTimeout(function(){
+		//	output.innerHTML += '<br/>'+ closure();
+		//},500); 
+		
+		//var closure = myClosure();
+		
+		//--------------
+		var closure = new myClosure2();
+		var output = document.getElementById('Output');
+		output.innerHTML = closure.foo();
+		
+		window.setTimeout(function(){
+			output.innerHTML += '<br/>'+ closure.foo();
+		},500); 
+		
+	}
+	
+	function myNonClosure(){
+		var date = new Date();
+		return date.getMilliseconds();
+	}
+		 
+	//Class
+	function myClosure(){
+		var date = new Date();
+		return function(){
+			return date.getMilliseconds();
+		};
+	}
+
+
+//Class
+var myClosure2 = function(){
+	var date = new Date();
+	var myNestedFunc = function(){
+		return date.getMilliseconds();
+	};
+	return {
+		foo: myNestedFunc
+	}
+}
+</script>
+</head>
+<body>
+	<div>
+		<h1>A simple demo using a closure</h1>
+		Note that the date 
+		<br/>
+		<br />
+		<div id="Output"> </div>
+	</div>
+</body>
+</html>

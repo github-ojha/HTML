@@ -1,0 +1,7 @@
+
+HTML5 Offline Applications with Angular, IndexedDB and Bootstrap
+
+Learn to build an AngularJS application that works just as well when disconnected from the web as it does with a reliable connection to the server.
+by Craig Shoemaker 
+@CraigShoemaker
+CraigShoemaker.net

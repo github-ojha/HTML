@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<script>
+	window.onload = function(){
+	
+	////can override the add function 
+	//Calculator.prototype = {
+	//	add: function(x,y){
+	//	var val = x+y;
+	//	this.eqCtl.innerHTML = val;
+	//	}
+		var c = new myNS.Calculator('eq');
+		c.add(2,2);
+	}
+
+	//an example of namespacing
+	
+	var myNS = myNS || {};
+	
+	//calculator.js
+	 //var Calculator = function (eq){
+	 myNS.Calculator = function (eq){
+		this.eqCtl = document.getElementById(eq);
+	};
+	myNS.Calculator.prototype = {
+		add: function(x,y){
+		var val = x+y;
+		this.eqCtl.innerHTML = val;
+		},
+		substract: function(x,y){
+		var val = x-y;
+		this.eqCtl.innerHTML = val;
+		}
+	};
+	
+	
+</script>
+</head>
+<body>
+<h1>Prototype Pattern</h1>
+
+<div id="eq"></div>
+
+</body>
+
+</html>
