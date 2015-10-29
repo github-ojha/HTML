@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Video API</title>
+</head>
+<body>
+    <p>Plays video. Click to start and stop video.</p>
+
+    <video>
+        <!--This one shows only a blank screen-->
+        <!--<video controls>-->
+        <!--This one shows controls-->
+        <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+        <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+        <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+
+        <source src="Wildlife.wmv" type="video/x-ms-wmv">
+        Your browser does not support the
+        <code>video</code> element.
+    </video>
+    <script>
+        var video;
+        window.addEventListener('load', init, false);
+        window.addEventListener('click', playPause, false);
+        function playPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function init() {
+            video = document.getElementsByTagName('video')[0];
+            video.play();
+        }
+    </script>
+</body>
+</html>

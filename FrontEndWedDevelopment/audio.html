@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio API</title>
+</head>
+<body>
+    <p>Plays music. Click to start and stop music.</p>
+
+    <audio>
+        <!--This one shows only a blank screen-->
+        <!--<audio controls>--> <!--This one shows controls-->
+        <source src="Sleep Away.mp3" type="audio/mp3">
+        <source src="Sleep Away.ogg" type="audio/ogg">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+    <script>
+        var audio;
+        window.addEventListener('load', init, false);
+        window.addEventListener('click', playPause, false);
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function init() {
+            audio = document.getElementsByTagName('audio')[0];
+            audio.play();
+        }
+    </script>
+</body>
+</html>
